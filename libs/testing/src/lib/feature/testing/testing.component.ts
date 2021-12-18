@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestService } from '../../services/test.service';
 
 @Component({
   selector: 'blog-examples-testing',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class TestingComponent implements OnInit {
   public toggleClass: string = '';
 
-  constructor() {}
+  constructor(private readonly testSvc: TestService) {}
 
-  ngOnInit(): void {}
+  async ngOnInit(): Promise<void> {
+    this.toggleClass = await this.testSvc.getClassValue();
+  }
 }
