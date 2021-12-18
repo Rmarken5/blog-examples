@@ -1,0 +1,10 @@
+<div class="test-container">
+  <div (click)="toggleClass = 'red'" class="red"></div>
+  <div (click)="toggleClass = 'white'" class="white"></div>
+  <div (click)="toggleClass = 'blue'" class="blue"></div>
+
+</div>
+
+<div class="result-container" [ngClass]="toggleClass">
+
+</div>

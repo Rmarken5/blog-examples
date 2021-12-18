@@ -1,0 +1,27 @@
+.test-container {
+  background: black;
+  height: 50vh;
+  div {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+  }
+}
+
+.result-container{
+  display: block;
+  height: 50vh;
+}
+
+.red {
+  background: red;
+}
+
+.white {
+  background: white;
+}
+
+.blue {
+  background: blue;
+}
