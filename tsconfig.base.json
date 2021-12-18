@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-apps/home": ["libs/home/src/index.ts"],
-      "@angular-apps/testing": ["libs/testing/src/index.ts"]
+      "@blog-examples/home": ["libs/home/src/index.ts"],
+      "@blog-examples/testing": ["libs/testing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

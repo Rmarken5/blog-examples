@@ -1,5 +1,5 @@
 {
-  "npmScope": "angular-apps",
+  "npmScope": "blog-examples",
   "affected": {
     "defaultBase": "main"
   },

@@ -5,7 +5,7 @@
       "projectType": "application",
       "root": "apps/blog-examples",
       "sourceRoot": "apps/blog-examples/src",
-      "prefix": "angular-apps",
+      "prefix": "blog-examples",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -127,7 +127,7 @@
       "projectType": "library",
       "root": "libs/home",
       "sourceRoot": "libs/home/src",
-      "prefix": "angular-apps",
+      "prefix": "blog-examples",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -153,7 +153,7 @@
       "projectType": "library",
       "root": "libs/testing",
       "sourceRoot": "libs/testing/src",
-      "prefix": "angular-apps",
+      "prefix": "blog-examples",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",

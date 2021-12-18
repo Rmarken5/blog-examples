@@ -10,12 +10,12 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('@angular-apps/home').then((m) => m.HomeModule),
+          import('@blog-examples/home').then((m) => m.HomeModule),
       },
       {
         path: 'testing',
         loadChildren: () =>
-          import('@angular-apps/testing').then((m) => m.TestingModule),
+          import('@blog-examples/testing').then((m) => m.TestingModule),
       },
     ],
   },
