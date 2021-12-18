@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { TestingComponent } from './testing.component';
+import { Operation, TestingComponent } from './testing.component';
 import { By } from '@angular/platform-browser';
 import { TestService } from '../../services/test.service';
 
@@ -88,5 +87,31 @@ describe('TestingComponent', () => {
     expect(resultElement.classes['white']).toBeFalsy();
     expect(resultElement.classes['blue']).toBeFalsy();
     expect(resultElement.classes['pink']).toBeFalsy();
+  });
+
+  it('should emit class value when clickable div is clicked', () => {
+    // Get EventEmitter from Component
+    const emitter = component.classNameEmitter;
+    // Spy on the EventEmitter emit function
+    const emitSpy = jest.spyOn(emitter, 'emit');
+    // Query a clickable div that triggers the emit function.
+    const blueDiv = fixture.debugElement.query(By.css('.blue'));
+    // Trigger click event to change classToggle Variable.
+    blueDiv.nativeElement.dispatchEvent(new Event('click'));
+    // Check the value EventEmitter emit was called with
+    expect(emitSpy).toHaveBeenNthCalledWith(1, 'blue');
+  });
+
+  it('should calculate - add', () => {
+    expect(4).toEqual(component.calculate(Operation.add, 2, 2));
+  });
+  it('should calculate - subtract', () => {
+    expect(2).toEqual(component.calculate(Operation.subtract, 4, 2));
+  });
+  it('should calculate - multiply', () => {
+    expect(6).toEqual(component.calculate(Operation.multiply, 2, 3));
+  });
+  it('should calculate - divide', () => {
+    expect(1).toEqual(component.calculate(Operation.divide, 2, 2));
   });
 });

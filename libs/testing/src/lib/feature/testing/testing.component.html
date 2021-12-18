@@ -1,10 +1,9 @@
 <div class="test-container">
-  <div (click)="toggleClass = 'red'" class="red"></div>
-  <div (click)="toggleClass = 'white'" class="white"></div>
-  <div (click)="toggleClass = 'blue'" class="blue"></div>
-
+  <div (click)="toggleClass = 'red'; classNameEmitter.emit(toggleClass)" class="red"></div>
+  <div (click)="toggleClass = 'white'; classNameEmitter.emit(toggleClass)" class="white"></div>
+  <div (click)="toggleClass = 'blue'; classNameEmitter.emit(toggleClass) " class="blue"></div>
 </div>
 
-<div class="result-container" [ngClass]="toggleClass">
-
+<div class="result-container"
+     [ngClass]="toggleClass">
 </div>

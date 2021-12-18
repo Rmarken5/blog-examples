@@ -92,7 +92,8 @@
           "outputs": ["coverage/apps/blog-examples"],
           "options": {
             "jestConfig": "apps/blog-examples/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "codeCoverage": true
           }
         }
       },
@@ -163,7 +164,8 @@
           "outputs": ["coverage/libs/testing"],
           "options": {
             "jestConfig": "libs/testing/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "coverageReporters": ["json", "lcov", "clover", "text"]
           }
         },
         "lint": {
