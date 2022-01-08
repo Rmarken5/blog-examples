@@ -17,6 +17,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('@blog-examples/testing').then((m) => m.TestingModule),
       },
+      {
+        path: 'state-management',
+        loadChildren: () =>
+          import('@blog-examples/state-management/feature').then(
+            (m) => m.StateManagementFeatureModule
+          ),
+      },
     ],
   },
 ];
