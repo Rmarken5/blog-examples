@@ -16,6 +16,15 @@
     "baseUrl": ".",
     "paths": {
       "@blog-examples/home": ["libs/home/src/index.ts"],
+      "@blog-examples/state-management/data-access": [
+        "libs/state-management/data-access/src/index.ts"
+      ],
+      "@blog-examples/state-management/feature": [
+        "libs/state-management/feature/src/index.ts"
+      ],
+      "@blog-examples/state-management/ui": [
+        "libs/state-management/ui/src/index.ts"
+      ],
       "@blog-examples/testing": ["libs/testing/src/index.ts"]
     }
   },

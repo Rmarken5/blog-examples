@@ -1,7 +1,4 @@
 {
-  "cli": {
-    "analytics": false
-  },
   "version": 1,
   "projects": {
     "blog-examples": {
@@ -147,6 +144,84 @@
             "lintFilePatterns": [
               "libs/home/src/**/*.ts",
               "libs/home/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "state-management-data-access": {
+      "projectType": "library",
+      "root": "libs/state-management/data-access",
+      "sourceRoot": "libs/state-management/data-access/src",
+      "prefix": "blog-examples",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/state-management/data-access"],
+          "options": {
+            "jestConfig": "libs/state-management/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/state-management/data-access/src/**/*.ts",
+              "libs/state-management/data-access/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "state-management-feature": {
+      "projectType": "library",
+      "root": "libs/state-management/feature",
+      "sourceRoot": "libs/state-management/feature/src",
+      "prefix": "blog-examples",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/state-management/feature"],
+          "options": {
+            "jestConfig": "libs/state-management/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/state-management/feature/src/**/*.ts",
+              "libs/state-management/feature/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "state-management-ui": {
+      "projectType": "library",
+      "root": "libs/state-management/ui",
+      "sourceRoot": "libs/state-management/ui/src",
+      "prefix": "blog-examples",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/state-management/ui"],
+          "options": {
+            "jestConfig": "libs/state-management/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/state-management/ui/src/**/*.ts",
+              "libs/state-management/ui/src/**/*.html"
             ]
           }
         }
