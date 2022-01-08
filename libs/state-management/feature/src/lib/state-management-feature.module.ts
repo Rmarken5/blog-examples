@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StateFeatureComponentComponent } from './state-feature-component/state-feature-component.component';
 import { RouterModule, Routes } from '@angular/router';
+import { StateFeatureComponent } from './state-feature/state-feature.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: StateFeatureComponentComponent,
+    component: StateFeatureComponent,
   },
 ];
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(routes)],
-  declarations: [StateFeatureComponentComponent],
+  declarations: [StateFeatureComponent],
 })
 export class StateManagementFeatureModule {}
