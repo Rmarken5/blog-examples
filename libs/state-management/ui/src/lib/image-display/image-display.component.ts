@@ -1,11 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'blog-examples-image-display',
-  templateUrl: './image-display.component.html',
+  template: `
+    <section *ngIf="imageUrl">
+      <img [src]="imageUrl">
+    </section>
+  `,
   styleUrls: ['./image-display.component.scss']
 })
 export class ImageDisplayComponent implements OnInit {
+
+  @Input() imageUrl = '';
 
   constructor() { }
 
