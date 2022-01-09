@@ -6,7 +6,6 @@
         "@angular-eslint/no-host-metadata-property": "warn",
         "@typescript-eslint/no-empty-function": "warn",
         "@angular-eslint/no-empty-lifecycle-method": "off"
-
       }
     }
   ]

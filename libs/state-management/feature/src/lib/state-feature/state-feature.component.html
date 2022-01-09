@@ -1,1 +1,16 @@
-<p>state-feature works!</p>
+<section *ngIf="{
+  imgState: stateSvc.displayData$ | async
+} as data">
+  <section class="content-container">
+    <section class="content" *ngIf="data.imgState?.loadingStatus === LOADING_STATUS.LOADING">
+      LOADING...
+    </section>
+    <section class="content" *ngIf="data.imgState?.loadingStatus === LOADING_STATUS.SUCCESS">
+      <blog-examples-image-display [imageUrl]="data.imgState?.url"></blog-examples-image-display>
+    </section>
+    <section class="content" *ngIf="data.imgState?.loadingStatus === LOADING_STATUS.ERROR">
+      ERROR...
+    </section>
+    <button (click)="callService($event)">Click Me!</button>
+  </section>
+</section>

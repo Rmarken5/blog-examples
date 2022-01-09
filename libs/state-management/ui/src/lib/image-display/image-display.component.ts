@@ -11,7 +11,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ImageDisplayComponent implements OnInit {
 
-  @Input() imageUrl = '';
+  @Input() imageUrl: string | undefined = '';
 
   constructor() { }
 

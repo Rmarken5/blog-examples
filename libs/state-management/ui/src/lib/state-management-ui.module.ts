@@ -7,5 +7,6 @@ import { ImageDisplayComponent } from './image-display/image-display.component';
   declarations: [
     ImageDisplayComponent
   ],
+  exports:[ImageDisplayComponent],
 })
 export class StateManagementUiModule {}
