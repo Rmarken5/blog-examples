@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@blog-examples/dep-testing": ["libs/dep-testing/src/index.ts"],
       "@blog-examples/home": ["libs/home/src/index.ts"],
       "@blog-examples/state-management/data-access": [
         "libs/state-management/data-access/src/index.ts"

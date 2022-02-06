@@ -6,7 +6,9 @@ describe('MockHttpService', () => {
   let service: MockHttpService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [MockHttpService],
+    });
     service = TestBed.inject(MockHttpService);
   });
 

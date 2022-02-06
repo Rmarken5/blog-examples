@@ -1,4 +1,7 @@
 {
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "projects": {
     "blog-examples": {
@@ -90,7 +93,8 @@
           "options": {
             "jestConfig": "apps/blog-examples/jest.config.js",
             "passWithNoTests": true,
-            "codeCoverage": true
+            "codeCoverage": true,
+            "coverageReporters": ["json", "lcov", "clover", "text"]
           }
         }
       },
@@ -124,6 +128,33 @@
       "tags": [],
       "implicitDependencies": ["blog-examples"]
     },
+    "dep-testing": {
+      "projectType": "library",
+      "root": "libs/dep-testing",
+      "sourceRoot": "libs/dep-testing/src",
+      "prefix": "blog-examples",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/dep-testing"],
+          "options": {
+            "jestConfig": "libs/dep-testing/jest.config.js",
+            "passWithNoTests": true,
+            "coverageReporters": ["json", "lcov", "clover", "text"]
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/dep-testing/src/**/*.ts",
+              "libs/dep-testing/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "home": {
       "projectType": "library",
       "root": "libs/home",
@@ -135,7 +166,8 @@
           "outputs": ["coverage/libs/home"],
           "options": {
             "jestConfig": "libs/home/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "coverageReporters": ["json", "lcov", "clover", "text"]
           }
         },
         "lint": {
@@ -161,7 +193,8 @@
           "outputs": ["coverage/libs/state-management/data-access"],
           "options": {
             "jestConfig": "libs/state-management/data-access/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "coverageReporters": ["json", "lcov", "clover", "text"]
           }
         },
         "lint": {
@@ -187,7 +220,8 @@
           "outputs": ["coverage/libs/state-management/feature"],
           "options": {
             "jestConfig": "libs/state-management/feature/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "coverageReporters": ["json", "lcov", "clover", "text"]
           }
         },
         "lint": {
@@ -213,7 +247,8 @@
           "outputs": ["coverage/libs/state-management/ui"],
           "options": {
             "jestConfig": "libs/state-management/ui/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "coverageReporters": ["json", "lcov", "clover", "text"]
           }
         },
         "lint": {

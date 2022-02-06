@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {delay, firstValueFrom, of} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { delay, firstValueFrom, of } from 'rxjs';
 
 @Injectable()
 export class MockHttpService {
@@ -9,14 +9,11 @@ export class MockHttpService {
     3: 'https://media.boingboing.net/wp-content/uploads/2015/11/150611A-Sagan.jpg',
   };
 
-  constructor() {
-  }
+  constructor() {}
 
   public async callFakeAPI(): Promise<string> {
     const random = Math.floor(Math.random() * 3) + 1;
     const url = this.data[random];
-    return await firstValueFrom(of(url)
-      .pipe(
-        delay(1500)));
+    return await firstValueFrom(of(url).pipe(delay(1500)));
   }
 }

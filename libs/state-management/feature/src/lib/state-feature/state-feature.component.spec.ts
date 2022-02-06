@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StateFeatureComponent } from './state-feature.component';
+import { MockHttpService } from '../../../../data-access/src/lib/service/mock-http.service';
+import { DataStateStoreService } from '../../../../data-access/src/lib/service/data-state-store.service';
 
 describe('StateFeatureComponent', () => {
   let component: StateFeatureComponent;
@@ -8,9 +10,10 @@ describe('StateFeatureComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StateFeatureComponent ]
-    })
-    .compileComponents();
+      declarations: [StateFeatureComponent],
+      imports: [],
+      providers: [MockHttpService, DataStateStoreService],
+    }).compileComponents();
   });
 
   beforeEach(() => {
